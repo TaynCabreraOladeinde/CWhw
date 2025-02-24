@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="main"> 
-    <h1 class="title-text">Seserts</h1>
+    <h1 class="title-text">Deserts</h1>
     <div w3-include-html="text.txt"></div>
     <div class="container">
         <div class="category" id="category1">
@@ -24,17 +24,61 @@
             <p><input type="submit" value="Strawberry" id="strawberry"></p>
         </div>
 
+        <div class="category" id="category2">
+            <p>Waffles</p>
+            <p><input type="submit" value="Pure" id="pure"></p>
+            <p><input type="submit" value="Sugar" id="sugar"></p>
+            <p><input type="submit" value="Syrup" id="syrup"></p>
+        </div>
+        <div class="category" id="category3">
+            <p>Drinks</p>
+            <p><input type="submit" value="Coffee" id="coffee"></p>
+            <p><input type="submit" value="Fruit" id="fruit"></p>
+            <p><input type="submit" value="Tea" id="tea"></p>
+        </div>
+
 
     </div>
-
-
-
+    <div class="content">
+        <iframe 
+            class="info" 
+            src="text.txt" 
+            width="80%" 
+            height="400px">
+        </iframe>
+    </div>
 </div>
 
-    <script>
+<script>
+    $("#vanilla").click(function() {
+      $(".info").attr("src", "category_01/vanilla/vanilla.txt");
+    });
 
+    $("#chocolate").click(function() {
+        $(".info").attr("src", "category_01/chocolate/chocolate.txt");
+      });
 
-        
-    </script>
+      $("#strawberry").click(function() {
+        $(".info").attr("src", "category_01/strawberry/strawberry.txt");
+      });
+      $("#pure").click(function() {
+        $(".info").attr("src", "category_02/pure/pure.txt");
+      });
+      $("#sugar").click(function() {
+        $(".info").attr("src", "category_02/sugar/sugar.txt");
+      });
+      $("#syrup").click(function() {
+        $(".info").attr("src", "category_02/syrup/syrup.txt");
+      });
+      $("#coffee").click(function() {
+        $(".info").attr("src", "category_03/coffee/coffee.txt");
+      });
+      $("#fruit").click(function() {
+        $(".info").attr("src", "category_03/fruit/fruit.txt");
+      });
+      $("#tea").click(function() {
+        $(".info").attr("src", "category_03/tea/tea.txt");
+      });
+  </script>
 </body>
 </html>
